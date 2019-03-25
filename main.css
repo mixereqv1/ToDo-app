@@ -1,0 +1,46 @@
+/* Todos list */
+.content{
+    margin: 0 auto;
+    width: 30%;
+    height: 50%;
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Todo element */
+.taskItem{
+    width: 60%;
+    background: mediumorchid;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Todo text */
+.taskElement{
+    width: 80%;
+}
+
+
+/* Buttons hover effects */
+.editBtn:hover{
+    color: coral;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.delBtn:hover{
+    color: red;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.acceptBtn:hover{
+    color: lightgreen;
+    transition: 0.3s;
+    cursor: pointer;
+}
