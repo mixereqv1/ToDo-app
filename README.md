@@ -1,5 +1,4 @@
 # ToDo-app
---work-in-progress--
 
 ## What's new
 
