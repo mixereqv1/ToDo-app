@@ -6,6 +6,7 @@
 .container{
     display: flex;
     justify-content: center;
+    align-content: flex-start;
     flex-wrap: wrap;
     font-family: 'Asap', sans-serif;
     background: #3F464C;
@@ -27,42 +28,46 @@
 .inputs{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     width: 100%;
     margin: 20px;
 }
 
 .task, .add{
-    margin: 20px 0;
+    margin: 15px auto;
 }
 
 .task-text{
     border-radius: 5px;
-    padding: 2px 0;
+    width: 200px;
 }
 
 .add-button{
-    padding: 5px 0;
+    padding: 10px;
     text-align: center;
-    border-width: 0px;
+    border: none;
     border-radius: 5px;
-    width: 156px;
+    width: 200px;
+    transition: all 0.3s ease;
 }
 
 .add-button:hover{
     cursor: pointer;
     background: #2186C4;
-    transition: all 0.3s ease;
 }
 
 /* Todos list */
 .content{
-    margin: 0 auto;
+    margin: 10px auto;
     width: 60%;
-    height: 60%;
+    max-height: 60%;
+    padding: 10px;
+    height: auto;
     background: lightblue;
     overflow-y: auto;
     border-radius: 12px;
     box-shadow: 5px 5px 10px black;
+    display: none;
 }
 
 /* Todo element */

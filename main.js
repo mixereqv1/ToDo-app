@@ -19,6 +19,7 @@ const todoapp = {
 
             taskElement.innerText = this.myInput.value;
 
+            this.content.style.display = 'block';
             this.content.appendChild(taskItem);
             taskItem.appendChild(taskElement);
             taskItem.appendChild(editElement);
@@ -31,14 +32,17 @@ const todoapp = {
 
     clickBtn: function(event){
         if(event.target.classList.contains('delBtn')){
+            if(this.content.childElementCount === 1){
+                this.content.style.display = 'none';
+            }
             event.target.parentElement.remove();
         }
         else if(event.target.classList.contains('editBtn')){
-            event.target.parentElement.querySelector('.taskElement').innerHTML = '<input type"text" class="textfield">';
+            event.target.parentElement.querySelector('.taskElement').innerHTML = '<input placeholder="Wpisz zadanie..." type"text" class="textfield">';
             event.target.className = 'fas fa-check acceptBtn';
         }
         else if(event.target.classList.contains('acceptBtn')){
-            event.target.parentElement.querySelector('.taskElement').innerHTML = event.target.parentElement.querySelector('.textfield').value;
+            event.target.parentElement.querySelector('.taskElement').innerText = event.target.parentElement.querySelector('.textfield').value;
             event.target.className = 'fas fa-pen editBtn';
         }
     },
