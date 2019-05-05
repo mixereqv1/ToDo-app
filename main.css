@@ -39,7 +39,10 @@
 
 .task-text{
     border-radius: 5px;
-    width: 200px;
+    width: 180px;
+    padding: 10px;
+    outline: none;
+    border: none;
 }
 
 .add-button{
@@ -76,7 +79,7 @@
     width: 90%;
     height: auto;
     background: #1FA1ED;
-    padding: 8px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,6 +89,18 @@
 /* Todo text */
 .taskElement{
     width: 93%;
+    padding: 5px;
+}
+
+.newtask{
+    outline: none;
+    border: none;
+    background: #3F464C;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px;
+    box-shadow: 1px 1px 2px black;
+
 }
 
 

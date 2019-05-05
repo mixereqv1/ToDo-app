@@ -11,4 +11,4 @@ Added border-radius to inputs and content element. <br />
 ## [Demo](https://mixereqv1.github.io/ToDo-app)
 
 ## Contact
-mateuszral7@gmail.com
+contact@mixereq.pl

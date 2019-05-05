@@ -38,12 +38,18 @@ const todoapp = {
             event.target.parentElement.remove();
         }
         else if(event.target.classList.contains('editBtn')){
-            event.target.parentElement.querySelector('.taskElement').innerHTML = '<input placeholder="Wpisz zadanie..." type"text" class="textfield">';
+            event.target.parentElement.querySelector('.taskElement').innerHTML = '<input placeholder="Wpisz zadanie..." type"text" class="newtask">';
             event.target.className = 'fas fa-check acceptBtn';
         }
         else if(event.target.classList.contains('acceptBtn')){
-            event.target.parentElement.querySelector('.taskElement').innerText = event.target.parentElement.querySelector('.textfield').value;
-            event.target.className = 'fas fa-pen editBtn';
+            if(document.querySelector('.newtask').value == ''){
+                document.querySelector('.newtask').placeholder = 'Pole nie może być puste';
+            }
+            else{
+                event.target.parentElement.querySelector('.taskElement').innerText = event.target.parentElement.querySelector('.newtask').value;
+                event.target.className = 'fas fa-pen editBtn';
+            }
+            
         }
     },
 
